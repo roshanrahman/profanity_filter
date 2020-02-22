@@ -5,7 +5,7 @@ author: roshan<roshanrahman6399@gmail.com>
 homepage: https://www.github.com/roshanrahman
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dev_dependencies:
   test:
