@@ -1,5 +1,7 @@
 # profanity_filter
 
+![Dart CI](https://github.com/roshanrahman/profanity_filter/workflows/Dart%20CI/badge.svg)
+
 Simple Dart class to create filters that check and censor strings against profanity. A default English words list is provided.
 
 ## Usage
