@@ -432,13 +432,13 @@ class ProfanityFilter {
     this.wordsToFilterOutList.forEach((word) {
       if (replaceWith == null) {
         for (int i = 0; i < inputStringSoup.length; i++) {
-          if (inputStringSoup[i] == word) {
+          if (inputStringSoup[i].toLowerCase() == word) {
             inputStringSoup[i] = '*' * word.length;
           }
         }
       } else {
         for (int i = 0; i < inputStringSoup.length; i++) {
-          if (inputStringSoup[i] == word) {
+          if (inputStringSoup[i].toLowerCase() == word) {
             inputStringSoup[i] = replaceWith;
           }
         }

@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:profanity_filter/profanity_filter.dart';
 import 'package:test/test.dart';
+import '../lib/profanity_filter.dart';
 
 void main() {
   test('detects default profanity', () {
@@ -31,6 +31,12 @@ void main() {
   test('default - censors string', () {
     final filter = ProfanityFilter();
     expect(filter.censorString('what the fuck pass'), 'what the **** pass');
+    expect(filter.censorString('what the fish'), 'what the fish');
+  });
+
+  test('default - censors string with case', () {
+    final filter = ProfanityFilter();
+    expect(filter.censorString('what the FucK pass'), 'what the **** pass');
     expect(filter.censorString('what the fish'), 'what the fish');
   });
 
