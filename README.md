@@ -4,6 +4,8 @@
 
 Simple Dart class to create filters that check and censor strings against profanity. A default English words list is provided.
 
+You can also use the filters to filter out a custom set of words, by using the `ProfanityFilter.filterOnly()` constructor. 
+
 ## Usage
 
 To use this plugin, add `profanity_filter` as a [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
@@ -14,19 +16,19 @@ To use this plugin, add `profanity_filter` as a [dependency in your pubspec.yaml
 import 'package:profanity_filter/profanity_filter.dart';
 
 void main() {
-  final filter = ProfanityFilter(); //Creates filter with default list.
+  final filter = ProfanityFilter(); // Creates filter with default list.
   String myString = 'you are an ass';
 
   //To check if profanity exists
   bool isProfane = filter.checkStringForProfanity(
-      myString); //Returns true since 'ass' is in profanity list.
+      myString); // Returns true since 'ass' is in profanity list.
   if (isProfane) {
     print('Profanity was detected');
   }
 
   //To censor a string
   String cleanString = filter.censorString(myString);
-  print(cleanString); //Prints 'you are an ***'
+  print(cleanString); // Prints 'you are an ***'
 }
 ```
 
@@ -69,10 +71,17 @@ To create a filter with the default list, use the default constructor `Profanity
 
 Use `ProfanityFilter.filterAdditionally()` constructor and pass your list of custom words.
 
+This will use a list which is equivalent to `Default List + Custom List`
+
 #### To filter only custom words (default list is ignored)
 
-Use `ProfanityFilter.filterOnly()` constructor and pass your list of custom words.
+Use `ProfanityFilter.filterOnly()` constructor and pass a list containing your custom set of words.
+
+This will use a list which is equivalent to `Custom List`
 
 #### To filter with a few exclusions from default list
 
 Use `ProfanityFilter.ignore()` constructor and pass your list of custom words. Those words will be removed from the default list if they exist there.
+
+This will use a list which is equivalent to `Default List - Custom List`
+
