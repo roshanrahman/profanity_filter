@@ -8,6 +8,13 @@ void main() {
     final filter = ProfanityFilter();
     expect(filter.checkStringForProfanity('hello bitches'), true);
   });
+
+  test('default - lists all profanity', () {
+    final filter = ProfanityFilter();
+    expect(filter.getAllProfanity('what the fuck'), ['fuck']);
+    expect(filter.getAllProfanity('what the fish'), []);
+  });
+  
   test('default with additional words - detects profanity', () {
     final filter = ProfanityFilter.filterAdditionally(['chicken']);
     expect(filter.checkStringForProfanity('hello bitches'), true);
@@ -53,16 +60,15 @@ void main() {
     expect(filter.censorString('chicken dinner'), '******* ******');
     expect(filter.censorString('fuck chicken'), 'fuck *******');
   });
+  test('default - censors string - with custom replaceWith', () {
+    final filter = ProfanityFilter();
+    expect(filter.censorString('what the fuck', replaceWith: '[censored]'),
+        'what the [censored]');
+  });
 
   test('default with ignoring words - censors string', () {
     final filter = ProfanityFilter.ignore(['fuck']);
     expect(filter.censorString('what the fuck'), 'what the fuck');
     expect(filter.censorString('dick head'), '**** head');
-  });
-
-  test('default - censors string - with custom replaceWith', () {
-    final filter = ProfanityFilter();
-    expect(filter.censorString('what the fuck', replaceWith: '[censored]'),
-        'what the [censored]');
   });
 }

@@ -1,9 +1,8 @@
 name: profanity_filter
-description: Simple class to create filters that check and censor strings against profanity. A default English words list is provided.
-version: 0.0.1
-author: roshan<roshanrahman6399@gmail.com>
-homepage: https://www.github.com/roshanrahman
-
+description: Simple filter to check and censor strings against profanity, obscene words. A default English words list is provided (LDNOOBW).
+version: 1.0.3
+homepage: https://github.com/roshanrahman/profanity_filter
+repository: https://github.com/roshanrahman/profanity_filter
 environment:
   sdk: ">=2.1.0 <3.0.0"
 
