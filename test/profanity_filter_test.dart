@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:test/test.dart';
 import '../lib/profanity_filter.dart';
 
@@ -14,7 +12,7 @@ void main() {
     expect(filter.getAllProfanity('what the fuck'), ['fuck']);
     expect(filter.getAllProfanity('what the fish'), []);
   });
-  
+
   test('default with additional words - detects profanity', () {
     final filter = ProfanityFilter.filterAdditionally(['chicken']);
     expect(filter.checkStringForProfanity('hello bitches'), true);

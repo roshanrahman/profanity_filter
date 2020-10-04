@@ -1,3 +1,9 @@
+## [1.0.4] SDK Constraint bumped
+
+- The SDK version in pubspec.yaml is now `>=2.6.0 <3.0.0`
+- Minor code changes
+- Updated README.md 
+
 ## [1.0.3] - Major Refactoring
 
 - Moved the default list of words `defaultWordsToFilterOutList` to a new file `default_list.dart`
