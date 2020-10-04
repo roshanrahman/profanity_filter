@@ -71,9 +71,6 @@ String badString = 'you are an ass';
 List<String> wordsFound = filter.getAllProfanity(badString); //Returns ['ass']
 ```
 
-Optionally, you can provide your own clean replacement word to the `replaceWith` named parameter.
-`filter.censor(string, replaceWith:'[censored]')` will replace any profanity in `string` with `[censored]`
-
 ### `censor` - Censor a string (replace profanity with something clean)
 
 Use the `censor()` method of the filter instance. Pass in the string to be censored.
