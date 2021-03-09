@@ -59,7 +59,7 @@ class ProfanityFilter {
   ///
   ///If [replaceWith] is provided, replaces all profane words to that
   ///[replaceWith] string.
-  String censor(String inputString, {String replaceWith}) {
+  String censor(String inputString, {String? replaceWith}) {
     List<String> inputStringSoup = inputString.split(' ');
     this.wordsToFilterOutList.forEach((word) {
       if (replaceWith == null) {
@@ -96,7 +96,7 @@ class ProfanityFilter {
   }
 
   @Deprecated('This method has been renamed to `censor()`')
-  String censorString(String inputString, {String replaceWith}) {
+  String censorString(String inputString, {String? replaceWith}) {
     return censor(inputString, replaceWith: replaceWith);
   }
 

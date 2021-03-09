@@ -1,8 +1,11 @@
+## [2.0.0-nullsafety.0] Migrated to null safety
+
+- Minor code changes
 ## [1.0.4] SDK Constraint bumped
 
 - The SDK version in pubspec.yaml is now `>=2.6.0 <3.0.0`
 - Minor code changes
-- Updated README.md 
+- Updated README.md
 
 ## [1.0.3] - Major Refactoring
 
