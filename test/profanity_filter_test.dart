@@ -69,4 +69,11 @@ void main() {
     expect(filter.censorString('what the fuck'), 'what the fuck');
     expect(filter.censorString('dick head'), '**** head');
   });
+
+  test('must not detect substring as profanity', () {
+    final filter = ProfanityFilter();
+    expect(filter.hasProfanity('practitioner assessment'), false);
+    expect(filter.censor('practitioner assessment'), 'practitioner assessment');
+     expect(filter.getAllProfanity('practitioner assessment'), []);
+  });
 }
