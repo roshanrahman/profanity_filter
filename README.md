@@ -4,6 +4,7 @@
 
 ![Pub Version](https://img.shields.io/pub/v/profanity_filter)
 
+
 Simple Dart class to create filters with methods to check and censor strings against profanity. A default English words list is provided (from [LDNOOBW on GitHub](
   //https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words)).
 
@@ -13,9 +14,7 @@ You can also use the filters to filter out a custom set of words, by using the `
 
 To use this plugin, add `profanity_filter` as a [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
 
-> Note:
-> The current version `1.0.4` has some refactoring changes (see [CHANGELOG](CHANGELOG.md)), such as methods marked deprecated that should still work. However, if you are facing any issues, use the version `1.0.2` instead, and post an issue in the GitHub repository.
-
+> Note: The latest version of the package is null-safe. The last package version that wasn't null-safe is [1.0.4](https://pub.dev/packages/profanity_filter/versions/1.0.4)
 ### Example
 
 ```dart
