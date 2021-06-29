@@ -1,10 +1,10 @@
 name: profanity_filter
 description: Simple filter to check and censor strings against profanity, obscene words. A default English words list is provided (LDNOOBW).
-version: 2.0.0-nullsafety.0
+version: 2.0.0
 homepage: https://github.com/roshanrahman/profanity_filter
 repository: https://github.com/roshanrahman/profanity_filter
 environment:
-  sdk: '>=2.12.0-0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 
 dev_dependencies:
   test: ^1.16.0
