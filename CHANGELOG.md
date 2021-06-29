@@ -1,3 +1,6 @@
+## [2.0.0] Migrated to null safety
+- Released 2.0.0 with null safety
+- Fixed issue with getAllProfanity that was incorrectly detecting substrings as profanity.
 ## [2.0.0-nullsafety.0] Migrated to null safety
 
 - Minor code changes
