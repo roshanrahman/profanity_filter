@@ -83,7 +83,7 @@ class ProfanityFilter {
   List<String> getAllProfanity(String inputString) {
     List<String> found = [];
     this.wordsToFilterOutList.forEach((word) {
-      if (inputString.toLowerCase().contains(word)) {
+      if (inputString.toLowerCase().split(' ').contains(word)) {
         found.add(word);
       }
     });
