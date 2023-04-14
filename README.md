@@ -6,7 +6,7 @@
 
 
 Simple Dart class to create filters with methods to check and censor strings against profanity. A default English words list is provided (from [LDNOOBW on GitHub](
-  //https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words)).
+  https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words)).
 
 You can also use the filters to filter out a custom set of words, by using the `ProfanityFilter.filterOnly()` constructor.
 
